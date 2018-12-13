@@ -125,3 +125,6 @@ gradle-app.setting
 
 ### Gradle Patch ###
 **/build/
+
+# Mac OS X
+.DS_Store
