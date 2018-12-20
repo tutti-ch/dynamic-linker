@@ -9,9 +9,9 @@ fun processCreateForm(div: HTMLDivElement, form: HTMLFormElement) {
     val url = URL("https://tutti.page.link/")
     val redirect = URL(extractDestinationUrl(form))
 
-    val apn = if (redirect.toString() != "https://www.tutti.ch/") {
-        "ch.tutti.debug"
-    } else "ch.tutti"
+    val apn = if (redirect.toString().startsWith("https://www.tutti.ch/")) {
+        "ch.tutti"
+    } else "ch.tutti.debug"
     url.searchParams.append("apn", apn)
 
     utmParams
