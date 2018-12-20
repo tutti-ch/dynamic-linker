@@ -3,7 +3,7 @@ if (typeof kotlin === 'undefined') {
 }
 var output = function (_, Kotlin) {
   'use strict';
-  var equals = Kotlin.equals;
+  var startsWith = Kotlin.kotlin.text.startsWith_7epoxm$;
   var Unit = Kotlin.kotlin.Unit;
   var throwCCE = Kotlin.throwCCE;
   var clear = Kotlin.kotlin.dom.clear_asww5s$;
@@ -16,11 +16,11 @@ var output = function (_, Kotlin) {
     var tmp$, tmp$_0, tmp$_1;
     var url = new URL('https://tutti.page.link/');
     var redirect = new URL(extractDestinationUrl(form));
-    if (!equals(redirect.toString(), 'https://www.tutti.ch/')) {
-      tmp$ = 'ch.tutti.debug';
+    if (startsWith(redirect.toString(), 'https://www.tutti.ch/')) {
+      tmp$ = 'ch.tutti';
     }
      else
-      tmp$ = 'ch.tutti';
+      tmp$ = 'ch.tutti.debug';
     var apn = tmp$;
     url.searchParams.append('apn', apn);
     var tmp$_2;
